@@ -20,6 +20,10 @@ export default {
     components: {
         Card,
     },
+
+    created() {
+        document.title = this.$route.meta.title || "Главная";
+    },
 }
 </script>
 

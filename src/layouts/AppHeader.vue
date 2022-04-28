@@ -6,19 +6,7 @@
           <i class="pi pi-box" />
         </router-link>
       </template>
-      <!-- <template #item="{ item }">
-        <router-link
-          v-slot="{href, route, navigate, isActive, isExactActive}"
-          :to="item.to"
-          custom
-        >
-          <a
-            :href="href"
-            :class="{'active-link': isActive, 'active-link-exact': isExactActive}"
-            @click="navigate"
-          >{{ route.fullPath }}</a>
-        </router-link>
-      </template> -->
+      <!-- <router-link :to="item.to"></router-link> -->
       <template #end>
         <router-link to="/cart">
           <i class="pi pi-shopping-cart" />
@@ -42,22 +30,22 @@ export default {
                 {
                    label:'Главная',
                    icon:'pi pi-apple',
-                   to: '/',
+                   to: { name: 'home'},
                 },
                 {
                    label:'Товары',
                    icon:'pi pi-fw pi-pencil',
-                   to: '/goods',
+                   to: { name: 'categoryes'},
                 },
                 {
                    label:'Корзина',
                    icon:'pi pi-fw pi-user',
-                   to: '/cart',
+                   to: { name: 'cart'},
                 },
                 {
                    label:'О нас',
                    icon:'pi pi-fw pi-calendar',
-                   to: '/about',
+                   to: { name: 'about'},
                 },
              ]
     }),

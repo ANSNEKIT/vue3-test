@@ -1,21 +1,21 @@
 <template>
-  <div class="cards">
-    <Card
-      v-for="(item, index) in 10"
+  <ul
+    class="cards"
+    style="list-style: none"
+  >
+    <li
+      v-for="(item, index) in 5"
       :key="index"
-      class="card"
     >
-      <template #title>
-        Simple Card
-      </template>
-      <template #content>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-          quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-        </p>
-      </template>
-    </Card>
-  </div>
+      <router-link :to="{ name: 'category'}">
+        <Card class="card">
+          <template #title>
+            Категория {{ index + 1 }}
+          </template>
+        </Card>
+      </router-link>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -26,6 +26,10 @@ export default {
   components: {
       Card,
   },
+
+  created() {
+        document.title = this.$route.meta.title || "Главная";
+    },
 }
 </script>
 

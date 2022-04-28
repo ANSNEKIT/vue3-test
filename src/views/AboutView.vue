@@ -9,5 +9,9 @@
 
 export default {
     name: "HomeView",
+
+    created() {
+        document.title = this.$route.meta.title || "Главная";
+    },
 };
 </script>

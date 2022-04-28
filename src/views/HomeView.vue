@@ -11,6 +11,10 @@ export default {
     name: "HomeView",
     computed: {},
 
+    created() {
+        document.title = this.$route.meta.title || "Главная";
+    },
+
     mounted() {},
 
     methods: {

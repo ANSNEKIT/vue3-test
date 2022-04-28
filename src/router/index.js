@@ -3,6 +3,9 @@ import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView";
 import CartView from "@/views/CartView";
 import GoodsView from "@/views/GoodsView";
+import CardsView from "@/views/CardsView";
+import CategoryView from "@/views/CategoryView";
+import CardView from "@/views/CardView";
 
 const routes = [
     {
@@ -28,6 +31,25 @@ const routes = [
         name: "about",
         meta: { title: 'О нас', layout: 'AppHeader' },
         component: AboutView,
+    },
+    {
+        path: "/categoryes/:category_id",
+        name: "category",
+        meta: { title: '', layout: 'AppHeader' },
+        component: CardsView,
+    },
+
+    {
+        path: "/categoryes",
+        name: "categoryes",
+        meta: { title: '', layout: 'AppHeader' },
+        component: CategoryView,
+    },
+    {
+        path: "/categoryes/:category_id/card/:id",
+        name: "card",
+        meta: { title: '', layout: 'AppHeader' },
+        component: CardView,
     },
 ];
 
