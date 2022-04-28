@@ -4,7 +4,7 @@ import AboutView from "@/views/AboutView";
 import CartView from "@/views/CartView";
 import GoodsView from "@/views/GoodsView";
 import CardsView from "@/views/CardsView";
-import CategoryView from "@/views/CategoryView";
+import CategoryesView from "@/views/CategoryesView";
 import CardView from "@/views/CardView";
 
 const routes = [
@@ -37,13 +37,14 @@ const routes = [
         name: "category",
         meta: { title: '', layout: 'AppHeader' },
         component: CardsView,
+        props: (route) => ({ categoryId: route.params.category_id })
     },
 
     {
         path: "/categoryes",
         name: "categoryes",
         meta: { title: '', layout: 'AppHeader' },
-        component: CategoryView,
+        component: CategoryesView,
     },
     {
         path: "/categoryes/:category_id/card/:id",

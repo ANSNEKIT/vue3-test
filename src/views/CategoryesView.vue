@@ -7,7 +7,7 @@
     >
       <li>
         <router-link
-          :to="{name: 'category', params: {category_id: 1} }"
+          :to="{name: 'category', params: {category_id: 123} }"
           exact-active-class
         >
           <Card class="card">
@@ -19,7 +19,7 @@
       </li>
       <li>
         <router-link
-          :to="{name: 'category', params: {category_id: 2} }"
+          :to="{name: 'category', params: {category_id: 456} }"
           exact-active-class
         >
           <Card class="card">
@@ -37,7 +37,7 @@
 import Card from 'primevue/card';
 
 export default {
-    name: "CategoryView",
+    name: "CategoryesView",
     components: {
         Card,
     },
