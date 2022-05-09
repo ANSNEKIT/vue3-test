@@ -6,6 +6,8 @@ import GoodsView from "@/views/GoodsView";
 import CardsView from "@/views/CardsView";
 import CategoryesView from "@/views/CategoryesView";
 import CardView from "@/views/CardView";
+import PageNotFoundView from "@/views/PageNotFoundView";
+// import AppTest from "@/components/AppTest";
 
 const routes = [
     {
@@ -33,18 +35,17 @@ const routes = [
         component: AboutView,
     },
     {
+        path: "/categoryes/",
+        name: "categoryes",
+        meta: { title: '', layout: 'AppHeader' },
+        component: CategoryesView,
+    },
+    {
         path: "/categoryes/:category_id",
         name: "category",
         meta: { title: '', layout: 'AppHeader' },
         component: CardsView,
         props: (route) => ({ categoryId: route.params.category_id })
-    },
-
-    {
-        path: "/categoryes",
-        name: "categoryes",
-        meta: { title: '', layout: 'AppHeader' },
-        component: CategoryesView,
     },
     {
         path: "/categoryes/:category_id/card/:id",
@@ -52,6 +53,29 @@ const routes = [
         meta: { title: '', layout: 'AppHeader' },
         component: CardView,
     },
+    {
+        path: "/:catchAll(.*)",
+        name: "page404",
+        meta: { title: 'Страница не найдена', layout: 'AppHeader' },
+        component: PageNotFoundView,
+    },
+
+    // {
+    //     path: "/categoryes/",
+    //     name: "categoryes",
+    //     meta: { title: '', layout: 'AppHeader' },
+    //     component: CategoryesView,
+    //     children: [
+    //         {
+    //             path: ":blabla",
+    //             name: "category",
+    //             meta: { title: '', layout: 'AppHeader' },
+    //             component: AppTest,
+
+    //         },
+
+    //     ],
+    // },
 ];
 
 const router = createRouter({

@@ -1,21 +1,21 @@
 <template>
-  <div>
-    <Menubar :model="items">
-      <template #start>
-        <router-link to="/">
-          <i class="pi pi-box" />
-        </router-link>
-      </template>
-      <!-- <router-link :to="item.to"></router-link> -->
-      <template #end>
-        <router-link to="/cart">
-          <i class="pi pi-shopping-cart" />
-        </router-link>
-      </template>
-    </Menubar>
-  </div>
+    <div>
+        <Menubar :model="items">
+            <template #start>
+                <router-link to="/">
+                    <i class="pi pi-box" />
+                </router-link>
+            </template>
+            <!-- <router-link :to="item.to"></router-link> -->
+            <template #end>
+                <router-link to="/cart">
+                    <i class="pi pi-shopping-cart" />
+                </router-link>
+            </template>
+        </Menubar>
+    </div>
 
-  <slot />
+    <slot />
 </template>
 
 <script>

@@ -1,21 +1,21 @@
 <template>
-  <ul
-    class="cards"
-    style="list-style: none"
-  >
-    <li
-      v-for="(item, index) in 5"
-      :key="index"
+    <ul
+        class="cards"
+        style="list-style: none"
     >
-      <router-link :to="{ name: 'category'}">
-        <Card class="card">
-          <template #title>
-            Категория {{ index + 1 }}
-          </template>
-        </Card>
-      </router-link>
-    </li>
-  </ul>
+        <li
+            v-for="(item, index) in 5"
+            :key="index"
+        >
+            <router-link :to="{ name: 'category'}">
+                <Card class="card">
+                    <template #title>
+                        Категория {{ index + 1 }}
+                    </template>
+                </Card>
+            </router-link>
+        </li>
+    </ul>
 </template>
 
 <script>
